@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Idea Collector</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">💡 IdeaCollector</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#howtouse">How to use</a>
+      <a href="#submit">Submit Idea</a>
+      <a href="#ideas">Ideas</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <div class="hero" id="home" data-aos="fade-up">
+    <div class="hero-container">
+      <div class="hero-image">
+        <img src="idea.jpg" alt="Idea illustration" />
+      </div>
+      <div class="hero-text">
+        <h1><i>"Knowledge is an endless thirst"</i></h1>
+        <h1>Our ideas light the spark, but our impact lights the way.</h1>
+        <p>Submit, share, and explore innovative ideas that make a difference.</p>
+      </div>
+    </div>
+  </div>
+  
+
+  <!-- About Section -->
+  <div class="about" id="about" data-aos="fade-up">
+    <div class="about-container">
+      <div class="about-text">
+        <h2>About the Project</h2>
+    <p><i>The Idea Collector is a modern web-based platform designed to capture, organize, and develop creative ideas from users across various domains. Whether you're a student, a developer, or an entrepreneur, this tool helps you document your innovative thoughts and transform them into actionable plans.
+<br>
+<br>
+      With built-in functionality to auto-generate step-by-step implementation guidelines and skill requirements, it bridges the gap between ideation and execution. Users can edit their ideas, view public submissions, and get inspired by others.
+   <br>
+   <br>   
+      The platform’s intuitive interface, dynamic animations, and smooth user experience make it not just functional, but also engaging. It promotes collaboration, encourages creativity, and helps turn ideas into impactful real-world projects.</i></p>
+      </div>
+      <div class="about-image">
+        <img src="brain.jpg" alt="About the project illustration" />
+      </div>
+    </div>
+  </div>
+ 
+  <div class="how-to-use" id="howtouse" data-aos="fade-up">
+    <div class="how-container">
+      <div class="how-image">
+        <img src="howto.jpg" alt="How to use illustration" />
+      </div>
+      <div class="how-text">
+        <h2>How to Use This Website</h2>
+        <ol>
+          <li><strong>Explore the Purpose:</strong> Understand what this platform is built for and how it helps you grow your ideas.</li>
+          <li><strong>Submit Your Idea:</strong> Enter your idea details in the form and submit them in seconds.</li>
+          <li><strong>View & Edit:</strong> See submitted ideas and edit your own if needed.</li>
+          <li><strong>Get Guidance:</strong> Check the provided guidelines and skills needed to implement your idea.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+
+  <!-- Submit Idea Section -->
+  <section class="submit" id="submit" data-aos="fade-up">
+    <h2>Submit Your Idea</h2>
+    <form id="ideaForm">
+      <input type="text" id="title" placeholder="Title" required />
+      <textarea id="description" placeholder="Description" required></textarea>
+      <input type="email" id="email" placeholder="Your Email" required />
+      <button type="submit">Submit Idea</button>
+    </form>
+  </section>
+
+  <!-- Submitted Ideas Section -->
+  <section class="ideas" id="ideas" data-aos="fade-up">
+    <h2>Submitted Ideas</h2>
+    <div id="ideasList"></div>
+  </section>
+
+  <script src="app.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>

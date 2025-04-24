@@ -76,7 +76,7 @@ async function editIdea(button, id) {
 }
 
 
-// Generate dynamic guidelines based on keywords
+
 function generateGuidelines(title, description) {
   const lower = (title + description).toLowerCase();
   const steps = [
@@ -95,7 +95,7 @@ function generateGuidelines(title, description) {
   return steps;
 }
 
-// Generate realistic skills based on content
+
 function generateSkills(title, description) {
   const lower = (title + description).toLowerCase();
   const skills = ["Problem Solving", "Project Planning", "Documentation"];

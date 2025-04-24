@@ -170,8 +170,8 @@
   }
   @media (max-width: 768px) {
     .hero-container {
-      flex-direction: column;  /* Stack image + text */
-      text-align: center;      /* Center text on mobile */
+      flex-direction: column;  
+      text-align: center;      
     }
   
     .hero-text h1, .hero-text h2, .hero-text p {
@@ -183,7 +183,7 @@
     }
   }
   .hero-image img {
-    max-width: 300px;     /* Limits the size */
+    max-width: 300px;     
     width: 100%;
     height: auto;
     border-radius: 12px;
@@ -217,8 +217,8 @@
   }
   
   .about p {
-    font-size: 1.15rem;         /* Increased from default */
-    line-height: 1.8;           /* Better readability */
+    font-size: 1.15rem;         
+    line-height: 1.8;           
     margin-bottom: 1.2rem;
     color: #444;
   }
@@ -242,7 +242,7 @@
 }
 
 .about-image img {
-  max-width: 350px;    /* Resize the image */
+  max-width: 350px;    
   width: 100%;
   height: auto;
   border-radius: 12px;
@@ -335,4 +335,28 @@
   #ideaForm button {
     width: 100%;
   }
+}
+.footer {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.95rem;
+  border-top: 2px solid #444;
+}
+
+.footer-content p {
+  margin-bottom: 1rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.social-icons a {
+  color: #ffffff;
+  margin: 0 10px;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #00c4ff;
 }

@@ -6,7 +6,7 @@ const app = express();
 app.use(express.json());
 app.use(cors({origin:"https://ideacollectorr.netlify.app"}));
 
-// MongoDB connection with error handling
+
 mongoose.connect('mongodb+srv://shehanaz1402:RQSIVPJIwxiPL8da@cluster0.zp4zw5e.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', { 
   useNewUrlParser: true, 
   useUnifiedTopology: true 
@@ -14,7 +14,7 @@ mongoose.connect('mongodb+srv://shehanaz1402:RQSIVPJIwxiPL8da@cluster0.zp4zw5e.m
 .then(() => console.log("✅ MongoDB Connected Successfully"))
 .catch(err => console.error("❌ MongoDB Connection Error:", err));
 
-// Define Mongoose Schema
+
 const ideaSchema = new mongoose.Schema({
   title: { type: String, required: true },
   description: { type: String, required: true },
@@ -25,7 +25,7 @@ const ideaSchema = new mongoose.Schema({
 
 const Idea = mongoose.model("Idea", ideaSchema);
 
-// Generate Guidelines
+
 function generateGuidelines(title) {
   const steps = [
     "Research the core concept and validate its feasibility.",
@@ -47,7 +47,7 @@ function generateGuidelines(title) {
   return { steps, skills };
 }
 
-// POST: Submit Idea
+
 app.post("/api/ideas", async (req, res) => {
   try {
     const { title, description, email } = req.body;
@@ -70,7 +70,7 @@ app.post("/api/ideas", async (req, res) => {
   }
 });
 
-// GET: Fetch All Ideas
+
 app.get("/api/ideas", async (req, res) => {
   try {
     const ideas = await Idea.find();
@@ -80,7 +80,7 @@ app.get("/api/ideas", async (req, res) => {
   }
 });
 
-// PUT: Update Idea
+
 app.put("/api/ideas/:id", async (req, res) => {
   try {
     const { title, description } = req.body;
@@ -101,6 +101,6 @@ app.put("/api/ideas/:id", async (req, res) => {
   }
 });
 
-// Start Server
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`✅ Server running on port ${PORT}`));

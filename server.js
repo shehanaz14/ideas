@@ -55,7 +55,11 @@ app.post("/api/ideas", async (req, res) => {
       return res.status(400).json({ message: "All fields are required!" });
     }
 
-    const existingIdea = await Idea.findOne({ title, description });
+    const existingIdea = await Idea.findOne({
+      title: { $regex: new RegExp(`^${title}$`, "i") },
+      description: { $regex: new RegExp(`^${description}$`, "i") }
+    });
+
     if (existingIdea) {
       return res.status(200).json({ message: "Idea already exists!" });
     }
@@ -69,6 +73,7 @@ app.post("/api/ideas", async (req, res) => {
     res.status(500).json({ message: "Server error", error });
   }
 });
+
 
 
 app.get("/api/ideas", async (req, res) => {

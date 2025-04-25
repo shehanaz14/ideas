@@ -15,9 +15,33 @@ document.getElementById("ideaForm").addEventListener("submit", async (e) => {
   });
 
   const data = await response.json();
-  alert(data.message || "Idea submitted!");
-  document.getElementById("ideaForm").reset();
-  loadIdeas();
+
+if (data.message === "Idea already exists!") {
+  alert("❗ This idea already exists!");
+
+  // Scroll to the matching idea card
+  const allCards = document.querySelectorAll(".ideaCard");
+  for (const card of allCards) {
+    const cardTitle = card.querySelector(".title").textContent.trim();
+    const cardDesc = card.querySelector(".desc").textContent.trim();
+
+    if (cardTitle === title && cardDesc === description) {
+      card.scrollIntoView({ behavior: "smooth", block: "center" });
+      card.style.border = "2px solid red";
+      setTimeout(() => {
+        card.style.border = "none";
+      }, 2000);
+      break;
+    }
+  }
+
+  return;
+}
+
+alert("✅ Idea submitted successfully!");
+document.getElementById("ideaForm").reset();
+loadIdeas();
+
 });
 
 async function loadIdeas() {

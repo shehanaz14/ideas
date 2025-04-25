@@ -56,9 +56,10 @@ app.post("/api/ideas", async (req, res) => {
     }
 
     const existingIdea = await Idea.findOne({
-      title: { $regex: new RegExp(`^${title}$`, "i") },
-      description: { $regex: new RegExp(`^${description}$`, "i") }
+      title: { $regex: `^${title.trim()}$`, $options: "i" },
+      description: { $regex: `^${description.trim()}$`, $options: "i" }
     });
+    
 
     if (existingIdea) {
       return res.status(200).json({ message: "Idea already exists!" });

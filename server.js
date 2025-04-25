@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 
 const app = express();
 app.use(express.json());
-app.use(cors({origin:"https://ideacollectorr.netlify.app"}));
+app.use(cors({origin:"https://ideacollection.netlify.app"}));
 
 
 mongoose.connect('mongodb+srv://shehanaz1402:RQSIVPJIwxiPL8da@cluster0.zp4zw5e.mongodb.net/ideaCollectorDB?retryWrites=true&w=majority&appName=Cluster0', { 

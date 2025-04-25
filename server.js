@@ -7,7 +7,7 @@ app.use(express.json());
 app.use(cors({origin:"https://ideacollectorr.netlify.app"}));
 
 
-mongoose.connect('mongodb+srv://shehanaz1402:RQSIVPJIwxiPL8da@cluster0.zp4zw5e.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', { 
+mongoose.connect('mongodb+srv://shehanaz1402:RQSIVPJIwxiPL8da@cluster0.zp4zw5e.mongodb.net/ideaCollectorDB?retryWrites=true&w=majority&appName=Cluster0', { 
   useNewUrlParser: true, 
   useUnifiedTopology: true 
 })

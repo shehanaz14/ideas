@@ -11,7 +11,7 @@
     scroll-behavior: smooth;
   }
   
-  /* Navbar */
+
   .navbar {
     display: flex;
     justify-content: space-between;
@@ -39,6 +39,11 @@
   .navbar nav a:hover {
     color: #ffcc00;
   }
+  .nav-logo img {
+    height: 40px; /* Adjust as needed */
+    width: auto;
+    border-radius: 5px;
+  }
   @media (max-width: 768px) {
     .navbar {
       flex-direction: column;
@@ -52,7 +57,7 @@
     }
   }
   
-  /* Sections */
+
   section {
     padding: 4rem 2rem;
     max-width: 900px;
@@ -82,7 +87,7 @@
     margin-bottom: 1rem;
   }
   
-  /* Submit Form */
+
   #ideaForm {
     display: flex;
     flex-direction: column;
@@ -111,7 +116,7 @@
     background: #005fd1;
   }
   
-  /* Ideas List */
+
   #ideasList {
     margin-top: 1rem;
   }
@@ -422,5 +427,31 @@
 .team-member p {
   font-size: 0.9rem;
   color: #777;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  background-color: #111; /* Or your preferred navbar color */
+  color: white;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-logo img {
+  height: 50px; /* Adjust as needed */
+  width: auto;
+  border-radius: 5px;
 }
 
